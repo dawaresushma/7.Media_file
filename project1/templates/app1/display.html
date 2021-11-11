@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2">
+    <tr>
+        <td>Image</td>
+        <td>content</td>
+        <td>PDF</td>
+    </tr>
+    {% for i in obj %}
+<tr>
+    <td><img src="{{i.img.url}}" alt="image"></td>
+<td>{{i.content}}</td>
+    <td>{{i.file}}</td>
+    </tr>
+{% endfor %}
+</table>
+<a href="{% url 'feedpost' %}"><button>FeedPost</button></a>
+</body>
+</html>
